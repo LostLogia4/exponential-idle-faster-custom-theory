@@ -183,8 +183,8 @@ var init = () => {
 
     // Permanent Upgrades
     theory.createPublicationUpgrade(0, currency, 1e6);
-    theory.createBuyAllUpgrade(1, currency, 1e4);
-    theory.createAutoBuyerUpgrade(2, currency, 1e4);
+    theory.createBuyAllUpgrade(1, currency, 1e3);
+    theory.createAutoBuyerUpgrade(2, currency, 1e3);
 
     // Milestone Upgrades
     theory.setMilestoneCost(new CustomCost(total => BigNumber.from(getCustomCost(total))));
@@ -604,7 +604,7 @@ var getSecondaryEquation = () => {
     theory.secondaryEquationHeight = s_condition ? 70 : 50;
     let result = "\\begin{array}{c}";
 
-    if(s_condition) {
+    if !(s_condition) {
         result += "\\text{EF >>>>> CSR2}\\\\";
         result += "\\text{WHO NEEDS ROOTS}\\\\"
         result += "\\text{WHEN YOU HAVE}\\\\"
