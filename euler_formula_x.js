@@ -39,10 +39,10 @@ var s_achievement_1;
 var s_achievement_2;
 var s_achievement_3;
 var s_achievement_4;
-var s_boolean_1 = true;
-var s_boolean_2 = true;
-var s_boolean_3 = true;
-var s_boolean_4 = true;
+var s_boolean_1 = false;
+var s_boolean_2 = false;
+var s_boolean_3 = false;
+var s_boolean_4 = false;
 var s_count_3 = 0;
 var s_count_4 = 0;
 
@@ -600,7 +600,7 @@ var getPrimaryEquation = () => {
 }
 
 var getSecondaryEquation = () => {
-    let s_condition = s2Proof() && s_boolean_2 && false;
+    let s_condition = s2Proof() && s_boolean_2;
     theory.secondaryEquationHeight = s_condition ? 70 : 50;
     let result = "\\begin{array}{c}";
 
