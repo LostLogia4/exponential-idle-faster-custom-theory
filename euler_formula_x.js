@@ -87,7 +87,7 @@ var init = () => {
         t_speed = theory.createUpgrade(0, currency, new ExponentialCost(100, Math.log2(10)));
         t_speed.getDescription = (_) => Utils.getMath(getDesc(t_speed.level));
         t_speed.getInfo = (amount) => t_speed.level == t_speed.maxLevel ? Utils.getMath(getInfo(t_speed.level)) : Utils.getMathTo(getInfo(t_speed.level), getInfo(t_speed.level + amount));
-        //t_speed.maxLevel = 4;
+        t_speed.maxLevel = 4;
     }
 
     // q1
@@ -183,8 +183,8 @@ var init = () => {
 
     // Permanent Upgrades
     theory.createPublicationUpgrade(0, currency, 1e6);
-    theory.createBuyAllUpgrade(1, currency, 1e3);
-    theory.createAutoBuyerUpgrade(2, currency, 1e3);
+    theory.createBuyAllUpgrade(1, currency, 100);
+    theory.createAutoBuyerUpgrade(2, currency, 100);
 
     // Milestone Upgrades
     theory.setMilestoneCost(new CustomCost(total => BigNumber.from(getCustomCost(total))));
@@ -657,7 +657,7 @@ var getQuaternaryEntries = () => {
 
 var get3DGraphPoint = () => swizzle((state - center) * scale);
 var get3DGraphTranslation = () => swizzle((new Vector3(-t_graph.toNumber() + 6, 0, 0) - center) * scale);
-var getPublicationMultiplier = (tau) => tau.pow(1);
+var getPublicationMultiplier = (tau) => tau.pow(1.2);
 var getPublicationMultiplierFormula = (symbol) => symbol + "^{1}";
 var isCurrencyVisible = (index) => index == 0 || (index == 1 && dimension.level > 0) || (index == 2 && dimension.level > 1);
 var getTau = () => currency.value.pow(BigNumber.from(0.4));
