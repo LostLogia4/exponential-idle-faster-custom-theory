@@ -286,37 +286,37 @@ var init = () => {
 
 
     // Story Chapters
-    let story_chapter_1 = "";
+    let story_chapter_1 = " ";
     theory.createStoryChapter(0, "Circular Reasoning", story_chapter_1, () => q1.level == 0); // unlocked at beginning of the theory
 
-    let story_chapter_2 = "";
+    let story_chapter_2 = " ";
     theory.createStoryChapter(1, "Anticipation", story_chapter_2, () => currency.value > BigNumber.from(1e7)); // unlocked at rho = 1e7
 
-    let story_chapter_3 = "";
+    let story_chapter_3 = " ";
     theory.createStoryChapter(2, "A Breakthrough", story_chapter_3, () => dimension.level == 1); // unlocked at R dimension milestone
 
-    let story_chapter_4 = "";
+    let story_chapter_4 = " ";
     theory.createStoryChapter(3, "Complex Progress", story_chapter_4, () => dimension.level == 2); // unlocked at I dimension milestone
 
-    let story_chapter_5 = "";
+    let story_chapter_5 = " ";
     theory.createStoryChapter(4, "A Different Approach", story_chapter_5, () => a_base.level == 1); // unlocked at a_base first milestone
 
-    let story_chapter_6 = "";
+    let story_chapter_6 = " ";
     theory.createStoryChapter(10, "Explosion", story_chapter_6, () => a_base.level == 3); // unlocked at a_base last milestone
 
-    let story_chapter_7 = "";
+    let story_chapter_7 = " ";
     theory.createStoryChapter(5, "Exponential Ideas", story_chapter_7, () => a_exp.level == 1); // unlocked at a_exponent first milestone
 
-    let story_chapter_8 = "";
+    let story_chapter_8 = " ";
     theory.createStoryChapter(6, "The End?", story_chapter_8, () => (a_base.level == 3 && a_exp.level == 5)); // unlocked at a_exp and a_base max milestone
 
-    let story_chapter_9 = "";
+    let story_chapter_9 = " ";
     theory.createStoryChapter(7, "A New Beginning", story_chapter_9, () => b_base.level > 0); // unlocked at tau = e100 (b2 first milestone)
 
-    let story_chapter_10 = "";
+    let story_chapter_10 = " ";
     theory.createStoryChapter(8, "Frustration", story_chapter_10, () => c_base.level > 0); // unlocked at tau = e120 (c2 first milestone)
 
-    let story_chapter_11 = "";
+    let story_chapter_11 = " ";
     theory.createStoryChapter(9, "The True Ending", story_chapter_11, () => predicateAndCallbackPopup()); // unlocked at tau = e150 (finished)
 
     updateAvailability();
